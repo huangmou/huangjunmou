@@ -24,4 +24,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'org.xutils:xutils:3.3.36'
+    compile 'com.netflix.feign:feign-gson:8.17.0'
+    compile files('libs/AMap2DMap_2.9.0_AMapLocation_2.6.0_20160628.jar')
 }
