@@ -110,7 +110,7 @@
 
     <com.welink.myapp.view.MyLetterListView
         android:id="@+id/MyLetterListView01"
-        android:layout_width="30dip"
+        android:layout_width="50dp"
         android:layout_height="fill_parent"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/gps_city_lay" />

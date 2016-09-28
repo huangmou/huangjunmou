@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.welink.myapp.activity.SelectCityActivity;
+import com.welink.myapp.activity.GifTestActivity;
+import com.welink.myapp.activity.JokeActivity;
+import com.welink.myapp.activity.WeatherActivity;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
@@ -33,13 +35,21 @@ public class MainActivity extends Activity implements View.OnClickListener{
     }
     private void registerListener() {
         lin_main_weather.setOnClickListener(this);
+        lin_main_joke.setOnClickListener(this);
+        lin_main_xc.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.lin_main_weather:
-                startActivity(new Intent(this, SelectCityActivity.class));
+                startActivity(new Intent(this, WeatherActivity.class));
+                break;
+            case R.id.lin_main_joke:
+                startActivity(new Intent(this, JokeActivity.class));
+                break;
+            case R.id.lin_main_xc:
+                startActivity(new Intent(this, GifTestActivity.class));
                 break;
         }
     }

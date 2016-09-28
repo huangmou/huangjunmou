@@ -1,0 +1,57 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.welink.myapp.fragment.JokeFourFragment">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/text_joke_context_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:textSize="18sp" />
+
+    <include
+        android:id="@+id/gif_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/gif_progress_group"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_below="@+id/text_joke_context_four"
+        android:layout_centerHorizontal="true">
+
+    </include>
+
+    <LinearLayout
+        android:layout_below="@+id/gif_group"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_on"
+            android:background="@drawable/gl_btn_blue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:layout_height="wrap_content"
+            android:text="上一张"
+             />
+
+        <Button
+            android:id="@+id/bt_next"
+            android:background="@drawable/gl_btn_blue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_height="wrap_content"
+            android:text="下一张" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+</ScrollView>

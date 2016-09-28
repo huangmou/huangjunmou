@@ -109,11 +109,14 @@ public class TimeUtils {
      *
      * @return
      */
-    public static int getData_mm() {
+    public static String getData_mm() {
         SimpleDateFormat formatter = new SimpleDateFormat("mm");
         Date curDate = new Date(System.currentTimeMillis());// 获取当前时间
         int str = Integer.parseInt(formatter.format(curDate).toString());
-        return str;
+        if (str<10){
+            return "0"+str;
+        }
+        return Integer.toString(str);
     }
 
     /**

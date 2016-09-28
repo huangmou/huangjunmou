@@ -31,6 +31,7 @@ import com.amap.api.location.AMapLocationListener;
 import com.welink.myapp.MyApp;
 import com.welink.myapp.R;
 import com.welink.myapp.entry.City;
+import com.welink.myapp.util.Utils;
 import com.welink.myapp.view.MyLetterListView;
 
 import org.json.JSONArray;
@@ -91,7 +92,7 @@ public class SelectCityActivity extends Activity {
                     amapLocation.getCityCode();//城市编码
                     amapLocation.getAdCode();//地区编码
                     amapLocation.getAoiName();//获取当前定位点的AOI信息
-                    lng_city.setText( amapLocation.getCity());
+                    lng_city.setText(Utils.getOnPlace( amapLocation.getCity()));
                     lngCityName=amapLocation.getCity();
                     System.out.println(amapLocation.getAddress());
                 } else {

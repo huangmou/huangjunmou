@@ -22,8 +22,13 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
+    compile files('libs/AMap2DMap_2.9.0_AMapLocation_2.6.0_20160628.jar')
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'org.xutils:xutils:3.3.36'
     compile 'com.netflix.feign:feign-gson:8.17.0'
-    compile files('libs/AMap2DMap_2.9.0_AMapLocation_2.6.0_20160628.jar')
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile project(':library')
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'
+    compile 'com.pnikosis:materialish-progress:1.7'
 }
