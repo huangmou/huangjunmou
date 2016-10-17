@@ -3,8 +3,10 @@ package com.welink.myapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.welink.myapp.activity.GifTestActivity;
 import com.welink.myapp.activity.JokeActivity;
@@ -52,5 +54,23 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 startActivity(new Intent(this, GifTestActivity.class));
                 break;
         }
+    }
+
+    /**
+     * 按两次退出
+     */
+    private long mExitTime;
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if ((System.currentTimeMillis() - mExitTime) > 2000) {
+                Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                mExitTime = System.currentTimeMillis();
+            } else {
+                System.exit(0);
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

@@ -253,8 +253,8 @@ public class WeatherActivity extends Activity implements View.OnClickListener {
             gan=ganmao.get(0)+","+ganmao.get(1);
             JSONArray xiche=info.getJSONArray("xiche");
             xi=xiche.get(0)+","+xiche.get(1);
-            JSONArray wuran=info.getJSONArray("wuran");
-            wu=wuran.get(0)+","+wuran.get(1);
+//            JSONArray wuran=info.getJSONArray("wuran");
+//            wu=wuran.get(0)+","+wuran.get(1);
             JSONArray chuanyi=info.getJSONArray("chuanyi");
             chuan=chuanyi.get(0)+","+chuanyi.get(1);
 
@@ -273,7 +273,7 @@ public class WeatherActivity extends Activity implements View.OnClickListener {
                 text_weather_chuanyi.setText("穿衣指数："+chuan);
                 text_weather_ganmao.setText("感冒指数："+gan);
                 text_weather_kongtiao.setText("空调指数："+kong);
-                text_weather_wuran.setText("污染指数："+wu);
+                text_weather_wuran.setText("污染指数：");
                 text_weather_yundong.setText("运动指数："+yun);
                 text_weather_ziwai.setText("紫外线指数："+ziwai);
                 text_weather_xiche.setText("洗车指数："+xi);

@@ -1,17 +1,14 @@
 package com.welink.myapp.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
-import android.view.View;
-import android.widget.TextView;
+import android.widget.Toast;
 
-import com.pnikosis.materialishprogress.ProgressWheel;
 import com.welink.myapp.R;
-import com.welink.myapp.util.AlxGifHelper;
+import com.welink.myapp.entry.Person;
 
-import pl.droidsonroids.gif.GifImageView;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.SaveListener;
 
 public class GifTestActivity extends AppCompatActivity {
 
@@ -19,22 +16,23 @@ public class GifTestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gif_test);
-        int screenWidth = getScreenWidth(this);
-        AlxGifHelper gifHelper = new AlxGifHelper();
-        View gifGroup1 = findViewById(R.id.gif_group_1);
+//        Bmob.initialize(this, "1374bcf49d890a8d4cb1a237d00e1139");
 
-        AlxGifHelper.displayImage("https://qraved-staging.s3.amazonaws.com/images/journal/data/2016/08/15/54113f968e243.gif",
-                (GifImageView) gifGroup1.findViewById(R.id.gif_photo_view),
-                (ProgressWheel) gifGroup1.findViewById(R.id.progress_wheel),
-                (TextView) gifGroup1.findViewById(R.id.tv_progress),
-                screenWidth-100//gif显示的宽度为屏幕的宽度减去边距
-        );
+        Person p2 = new Person();
+        p2.setName("lucky");
+        p2.setAddress("北京海淀");
+        p2.save(new SaveListener<String>() {
+            @Override
+            public void done(String objectId,BmobException e) {
+                if(e==null){
+                    Toast.makeText(GifTestActivity.this,"添加数据成功，返回objectId为："+objectId,Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(GifTestActivity.this,"创建数据失败：" + e.getMessage(),Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
 
 
-    public int getScreenWidth(Activity activity) {
-        DisplayMetrics metric = new DisplayMetrics();
-        activity.getWindowManager().getDefaultDisplay().getMetrics(metric);
-        return metric.widthPixels;
-    }
+
 }
