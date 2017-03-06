@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="E:\sxtx\huangjunmou\MyAPP\WelinkCommon\src\main\assets"><file name="4zlink.p12" path="E:\sxtx\huangjunmou\MyAPP\WelinkCommon\src\main\assets\4zlink.p12"/><file name="server.bks" path="E:\sxtx\huangjunmou\MyAPP\WelinkCommon\src\main\assets\server.bks"/></source><source path="E:\sxtx\huangjunmou\MyAPP\WelinkCommon\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="E:\sxtx\huangjunmou\MyAPP\WelinkCommon\src\debug\assets"/></dataSet></merger>

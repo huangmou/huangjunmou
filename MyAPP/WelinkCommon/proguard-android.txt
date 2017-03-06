@@ -1,0 +1,110 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+-dontpreverify
+-keepattributes *Annotations*
+-keepattributes Signature
+-keepattributes SourceFile,LineNumberTable
+-dontusemixedcaseclassnames
+
+
+#保存被AndroidManifest.xml调用或者webview的类。这是因为proguard会移除没有被调用的代码
+-keep class android.webkit.** {*;}
+-dontwarn android.webkit.**
+-keep public class * extends android.app.Activity {*;}
+-keep public class * extends android.app.Application  {*;}
+-keep public class * extends android.app.Service                      {*;}
+-keep public class * extends android.content.BroadcastReceiver        {*;}
+-keep public class * extends android.content.ContentProvider          {*;}
+-keep public class * extends android.app.backup.BackupAgentHelper     {*;}
+-keep public class * extends android.preference.Preference {*;}
+-keep class javax.** {*;}
+-dontwarn javax.**
+
+
+
+#第三方类库
+
+-keep public class android.** {*;}
+-dontwarn com.google.**
+-keep public class com.google.** {*;}
+-dontwarn org.**
+-keep public class org.** {*;}
+-dontwarn com.tencent.android.**
+-keep public class com.tencent.android.** {*;}
+-dontwarn com.baidu.**
+-keep public class com.baidu.** {*;}
+-dontwarn com.handmark.pulltorefresh.library.**
+-keep class com.handmark.pulltorefresh.library.** {*;}
+-dontwarn com.viewpagerindicator.**
+-keep public class com.viewpagerindicator.** {*;}
+-dontwarn com.igexin.**
+-keep class com.igexin.**{*;}
+-dontwarn com.jason.feick.**
+-keep public class com.jason.feick.**{*;}
+
+#在github上的开源proguarddemo上学来的，删除Log代码
+#-assumenosideeffects class android.util.Log {
+#    public static *** e(...);
+#    public static *** w(...);
+#    public static *** wtf(...);
+#    public static *** d(...);
+#    public static *** v(...);
+#}
+
+#避免混淆
+-dontshrink
+-dontoptimize
+-dontwarn com.google.android.maps.**
+-dontwarn android.webkit.WebView
+-dontwarn com.umeng.**
+-dontwarn com.tencent.weibo.sdk.**
+-dontwarn com.facebook.**
+
+
+-keep enum com.facebook.**
+-keepattributes Exceptions,InnerClasses,Signature
+-keepattributes *Annotation*
+-keepattributes SourceFile,LineNumberTable
+
+-keep public interface com.facebook.**
+-keep public interface com.tencent.**
+-keep public interface com.umeng.socialize.**
+-keep public interface com.umeng.socialize.sensor.**
+-keep public interface com.umeng.scrshot.**
+
+-keep public class com.umeng.socialize.* {*;}
+-keep public class javax.**
+-keep public class android.webkit.**
+
+-keep class com.facebook.**
+-keep class com.umeng.scrshot.**
+-keep public class com.tencent.** {*;}
+-keep class com.umeng.socialize.sensor.**
+
+-keep class com.tencent.mm.sdk.modelmsg.WXMediaMessage {*;}
+
+-keep class com.tencent.mm.sdk.modelmsg.** implements com.tencent.mm.sdk.modelmsg.WXMediaMessage$IMediaObject {*;}
+
+-keep class im.yixin.sdk.api.YXMessage {*;}
+-keep class im.yixin.sdk.api.** implements im.yixin.sdk.api.YXMessage$YXMessageData{*;}
+
+-keep public class [your_pkg].R$*{
+    public static final int *;
+}
+
+-ignorewarnings

@@ -1,0 +1,24 @@
+<resources>
+
+    <string name="text_loadingdata">努力加载中...</string>
+	<string name="nosdcard">没有找到Sdcard，应用升级功能将无法使用!</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    
+    <string name="E10001"></string>
+    <string name="E10002"></string>
+    <string name="E10003"></string>
+    <string name="E10004"></string>
+    <string name="E10005"></string>
+    <string name="E10006"></string>
+    <string name="E10007"></string>
+    <string name="E10008"></string>
+    <string name="E10009"></string>
+    <string name="E10010"></string>
+    <string name="E10011"></string>
+    
+</resources>

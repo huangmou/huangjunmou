@@ -28,6 +28,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private RelativeLayout lin_main_phone;
     @ViewInject(R.id.lin_main_dai)
     private RelativeLayout lin_main_dai;
+    private  String ACTIVITY_ALIAS_1="ActivityAlias1";
+    private  String ACTIVITY_ALIAS_2="ActivityAlias2";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,9 +70,12 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 mExitTime = System.currentTimeMillis();
             } else {
                 System.exit(0);
+
             }
             return true;
         }
         return super.onKeyDown(keyCode, event);
     }
+
+
 }

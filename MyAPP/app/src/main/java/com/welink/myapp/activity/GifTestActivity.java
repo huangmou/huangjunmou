@@ -16,7 +16,6 @@ public class GifTestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gif_test);
-//        Bmob.initialize(this, "1374bcf49d890a8d4cb1a237d00e1139");
 
         Person p2 = new Person();
         p2.setName("lucky");
@@ -32,7 +31,4 @@ public class GifTestActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
 }

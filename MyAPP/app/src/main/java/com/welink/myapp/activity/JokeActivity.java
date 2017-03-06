@@ -1,6 +1,7 @@
 package com.welink.myapp.activity;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -8,7 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.support.design.widget.TabLayout;
+
 import com.welink.myapp.R;
 import com.welink.myapp.fragment.JokeFourFragment;
 import com.welink.myapp.fragment.JokeOneFragment;
@@ -44,6 +45,7 @@ public class JokeActivity extends AppCompatActivity {
         viewpager_joke.setAdapter(adapter);
         tab_layout_joke.setTabsFromPagerAdapter(adapter);
         tab_layout_joke.setupWithViewPager(viewpager_joke);
+        
 
 
 

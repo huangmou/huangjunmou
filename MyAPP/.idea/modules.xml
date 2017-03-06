@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyAPP.iml" filepath="$PROJECT_DIR$/MyAPP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WelinkCommon/WelinkCommon.iml" filepath="$PROJECT_DIR$/WelinkCommon/WelinkCommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>

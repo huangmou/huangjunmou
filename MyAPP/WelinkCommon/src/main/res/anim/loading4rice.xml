@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false"
+    >
+
+    <item android:drawable="@drawable/loadpic1" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic2" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic3" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic4" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic5" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic6" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic7" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic8" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic9" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic10" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic11" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic12" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic13" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic14" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic15" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic16" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic17" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic18" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic19" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic20" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic21" android:duration="45"/>
+    <item android:drawable="@drawable/loadpic22" android:duration="45"/>
+
+</animation-list>

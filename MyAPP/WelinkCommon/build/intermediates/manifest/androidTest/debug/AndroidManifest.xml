@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jason.feick.test" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:functionalTest="false"
+        android:handleProfiling="false"
+        android:label="Tests for com.jason.feick.test"
+        android:targetPackage="com.jason.feick.test" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <application>
+        <uses-library android:name="android.test.runner" />
+
+        <activity android:name="com.jason.feick.LogActivity" />
+        <activity android:name="com.jason.feick.AAAAcitivty" />
+        <activity android:name="com.jason.feick.IntrusionActivity" />
+    </application>
+
+</manifest>
